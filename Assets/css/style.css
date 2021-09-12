@@ -18,6 +18,8 @@ h2 {
     border: black solid 5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 #welcome-p{
@@ -26,6 +28,19 @@ h2 {
     align-self: center;
     padding: 25px;
 }
+
+button {
+    width: 100px;
+    height: auto;
+    align-self: center;
+    background-color: lightseagreen;
+    color: white;
+    opacity: .5;
+}
+button:hover{
+    opacity: 1;
+}
+
 
 .container {
     margin: auto;
