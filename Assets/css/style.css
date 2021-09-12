@@ -71,6 +71,7 @@ button:hover{
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 #quiz-question {
