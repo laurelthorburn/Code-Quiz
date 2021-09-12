@@ -3,6 +3,11 @@
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
 var quizEl = document.getElementById('quiz'); //grabs quz paragraph from index, location on page for quiz questions
 var welcomePage = document.getElementById('welcome-page');
+var quizQuestion = document.getElementById('quiz');
+var answer1 = document.getElementById('li1');
+var answer2 = document.getElementById('li2');
+var answer3 = document.getElementById('li3');
+var answer4 = document.getElementById('li4');
 
 var startBtn = document.getElementById('begin-btn');
 var submitBtn = document.getElementById('submit-btn');
@@ -17,15 +22,15 @@ var beginQuiz = function countdown() {
 changeVisibility();
 
 //Begin Timer
-  var timeLeft = 31; //quiz time in msec, multiplied by 1000 below to covert to seconds
+  var timeLeft = 76; //quiz time in msec, multiplied by 1000 below to covert to seconds
 
   var timeInterval = setInterval(function () {
     timeLeft--; //Begins the countdown
 
-    timerEl.textContent = timeLeft + " seconds remaining"; 
+    timerEl.textContent = "Time: " + timeLeft + " seconds"; 
 
     if (timeLeft === 1) { 
-      timerEl.textContent = timeLeft + " second remaining";
+      timerEl.textContent = "Time: " + timeLeft + " second";
     }
 
     if(timeLeft === 0) { 
@@ -37,6 +42,12 @@ changeVisibility();
     }
 
   }, 1000);
+
+//Begin Quiz Questions
+var maybeHS = function(){
+
+}
+
 };
 
 
