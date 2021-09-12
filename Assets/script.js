@@ -55,9 +55,55 @@ changeVisibility();
   }, 1000);
 
 //Begin Quiz Questions
-var maybeHS = function(){
+function mainQuiz(){
 
+    function questionOne(){
+        quizQuestion.textContent = "Sample Question 1"; 
+        answer1.textContent = "aSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionOne();
+
+    function questionTwo(){
+        quizQuestion.textContent = "Sample Question 2"; 
+        answer1.textContent = "bSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionTwo();
+
+    function questionThree(){
+        quizQuestion.textContent = "Sample Question 3"; 
+        answer1.textContent = "cSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionThree();
+
+    function questionFour(){
+        quizQuestion.textContent = "Sample Question 4"; 
+        answer1.textContent = "dSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+     };
+     questionFour();
+
+    function questionFive(){
+        quizQuestion.textContent = "Sample Question 5"; 
+        answer1.textContent = "eSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionFive();
 }
+
+mainQuiz();
 
 };
 
