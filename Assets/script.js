@@ -9,25 +9,26 @@ var submitBtn = document.getElementById('submit-btn');
 
 // Beginning main function that contains timer and quiz questions
 var beginQuiz = function countdown() {
+    // Welcome Page disappears on click (click event below)
     function changeVisibility(){
         welcomePage.setAttribute("style", "display: none; ");
     };
 
 changeVisibility();
 
+//Begin Timer
   var timeLeft = 31; //quiz time in msec, multiplied by 1000 below to covert to seconds
 
-  // TO DO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function () {
-    timeLeft--; //then begins the countdown
+    timeLeft--; //Begins the countdown
 
-    timerEl.textContent = timeLeft + " seconds remaining."; // shows this first so starts at 5
+    timerEl.textContent = timeLeft + " seconds remaining"; 
 
-    if (timeLeft === 1) { //WHY DO I SKIP 2
-      timerEl.textContent = timeLeft + " second remaining.";
+    if (timeLeft === 1) { 
+      timerEl.textContent = timeLeft + " second remaining";
     }
 
-    if(timeLeft === 0) { // was stopping at 2 when at 0
+    if(timeLeft === 0) { 
       // Stops execution of action at set interval
       clearInterval(timeInterval);
       timerEl.textContent = "Time is up!";
