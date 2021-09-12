@@ -3,8 +3,11 @@
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
 var quizEl = document.getElementById('quiz'); //grabs quz paragraph from index, location on page for quiz questions
 
+var startBtn = document.getElementById('begin-btn');
+var submitBtn = document.getElementById('submit-btn');
+
 // Beginning main function that contains timer and quiz questions
-function countdown() {
+var beginQuiz = function countdown() {
   var timeLeft = 31; //quiz time in msec, multiplied by 1000 below to covert to seconds
 
   // TO DO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
@@ -28,22 +31,5 @@ function countdown() {
   }, 1000);
 }
 
-// Displays the message one word at a time
-// function displayMessage() {
-//   var wordCount = 0;
-
-//   // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
-//   var msgInterval = setInterval(function () {
-//     // If there are no more words left in the message
-//     if (words[wordCount] === undefined) {
-//       // Use `clearInterval()` to stop the timer
-//       clearInterval(msgInterval);
-//     } else {
-//       // Display one word of the message
-//       mainEl.textContent = words[wordCount];
-//       wordCount++;
-//     }
-//   }, 1000);
-// }
-
-countdown(); //calling countdown function to start when a button is clicked
+//Quiz/timer starts when start quiz button is clicked
+startBtn.addEventListener("click", beginQuiz);

@@ -5,7 +5,7 @@
 
 h1 {
     text-align: center;
-    color: orange;
+    color: black;
     font-size: 30px;
 }
 
@@ -15,7 +15,6 @@ h2 {
 }
 #welcome-page{
     margin: 50px;
-    border: black solid 5px;
     display: flex;
     flex-direction: column;
 }
