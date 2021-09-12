@@ -46,4 +46,4 @@ function countdown() {
 //   }, 1000);
 // }
 
-countdown();
+countdown(); //calling countdown function to start when a button is clicked
