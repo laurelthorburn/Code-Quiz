@@ -12,7 +12,8 @@
 <body>
 
     <div class="top-bar">
-        <h2 id="view-hs">View High Scores</h2>
+        <!-- TO DO: create a link for high score -->
+        <h2 id="view-hs">View High Scores</h2> 
         <h2 id="countdown">Time: 0 seconds</h2>
     </div>
         <div id="welcome-page">
@@ -21,14 +22,25 @@
             <button id="begin-btn">Start Quiz</button>
         </div>
 
-        <div id="quiz">
-        <h1 id="quiz-question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, perferendis.</h1>
-        <ol>
-            <button id ="btn-a"><li id="li1">Lorem, ipsum dolor.</li></button>
-            <button id ="btn-b"><li id="li2">Lorem, ipsum dolor.</li></button>
-            <button id ="btn-c"><li id="li3">Lorem, ipsum dolor.</li></button>
-            <button id ="btn-d"><li id="li4">Lorem, ipsum dolor.</li></button>
-        </ol>
+        <div id="quiz-container">
+            <h1 id="quiz-question"></h1>
+
+            <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1">Choice 1</p>
+
+            <p class="choice-prefix">B</p>
+            <p class="choice-text" data-number="2">Choice 2</p>
+
+            <p class="choice-prefix">C</p>
+            <p class="choice-text" data-number="3">Choice 3</p>
+
+            <p class="choice-prefix">D</p>
+            <p class="choice-text" data-number="4">Choice 4</p>
+        
+            <p class="choice-prefix">E</p>
+            <p class="choice-text" data-number="5">Choice 5</p>
+
+            <p id ="result"></p>
         </div>
 
         <!-- <button id="submit-btn">Submit</button> -->
