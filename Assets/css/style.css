@@ -45,8 +45,7 @@ h2 {
     padding: 25px;
 }
 
-button,
-.choice-text {
+button {
     width: 100px;
     height: auto;
     align-self: center;
@@ -58,61 +57,51 @@ button,
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-button:hover,
-.choice-text:hover{
+button:hover{
     opacity: .5;
     cursor: pointer;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* why won't display:none work anymore??? */
-#quiz-container {
+#quiz {
     visibility: hidden;
+    background-color: seagreen;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    list-style: none;
-    padding: 10px 0;
-    /* justify-items: start; */
-    align-self: center;
-    justify-self: center;
-    background-color: maroon;
+    margin-top: 50px;
 }
 
 #quiz-question {
+    background-color: turquoise;
     width: 500px;
     display: flex;
     align-self: center;
     align-content: left;
     padding: 10px;
-    background-color: lime;
 }
 
-.choice-prefix {  
-    display: inline-flex;
-    flex-direction: row;
+ol {  
+    display: flex;
+    flex-direction: column;
+    width: 500px;
     list-style: none;
     margin: 10px 0 10px 10px;
     padding: 10px 0;
     justify-items: start;
+    background-color: steelblue;
     align-self: center;
-    background-color:magenta;
 }
 
-.choice-text {
+ol button {
     width: fit-content;
     padding: 0 5px;
     margin: 2px 0 2px 30px;
-    align-self: center;
-    background-color: mediumseagreen;
+    align-self: flex-start;
 }
 
-#result {
-    text-align: left;
-    color: gray;
-    font-style: italic;
-    font-size: 25px;
-    width: 500px;
-    align-self: center;
+li {
+background-color: violet;
 }

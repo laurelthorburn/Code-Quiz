@@ -1,78 +1,27 @@
-
-const question = document.querySelector("#quiz-question");
-const choices = document.querySelectorAll(".choice-text");
-const scoreText = document.querySelector("#score");
-const progressText = document.querySelector("#");
-
+//Global variables
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
+var quizEl = document.getElementById('quiz'); //grabs quz paragraph from index, location on page for quiz questions
+
 var welcomePage = document.getElementById('welcome-page'); //Welcome Page
-var quizDiv = document.getElementById('quiz-container'); //Main Quiz Container
 
+var quizDiv = document.getElementById('quiz'); //Main Quiz Container
 
-let currentQuestion = {};
-let acceptingAnswers = true;
+// grabbing quiz content
+var quizQuestion = document.getElementById('quiz-question');
+var answer1 = document.getElementById('li1');
+var answer2 = document.getElementById('li2');
+var answer3 = document.getElementById('li3');
+var answer4 = document.getElementById('li4');
 
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-
+// grabbing buttons
 var startBtn = document.getElementById('begin-btn');
-
-//Quiz Questions Set in an Array
-var questions = [
-    {
-    question: "Sample Question 1",
-    choice1: "aSample Answer 1",
-    choice2: "Sample Answer 2",
-    choice3: "Sample Answer 3", 
-    choice4: "Sample Answer 4",
-    choice5: "Sample Answer 4",
-    answer: "a",
-},
-{
-    question: "Sample Question 2",
-    choice1: "bSample Answer 1",
-    choice2: "Sample Answer 2",
-    choice3: "Sample Answer 3", 
-    choice4: "Sample Answer 4",
-    choice5: "Sample Answer 4",
-    answer: "a",
-},
-{
-    question: "Sample Question 3",
-    choice1: "cSample Answer 1",
-    choice2: "Sample Answer 2",
-    choice3: "Sample Answer 3", 
-    choice4: "Sample Answer 4",
-    choice5: "Sample Answer 4",
-    answer: "a",
-},
-{
-    question: "Sample Question 4",
-    choice1: "dSample Answer 1",
-    choice2: "Sample Answer 2",
-    choice3: "Sample Answer 3", 
-    choice4: "Sample Answer 4",
-    choice5: "Sample Answer 4",
-    answer: "a",
-},
-{
-    question: "Sample Question 5",
-    choice1: "eSample Answer 1",
-    choice2: "Sample Answer 2",
-    choice3: "Sample Answer 3", 
-    choice4: "Sample Answer 4",
-    choice5: "Sample Answer 4",
-    answer: "a",
-}
-];
-
-const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 5;
-
+var submitBtn = document.getElementById('submit-btn');
+var btnA = document.getElementById('btn-a');
+var btnB = document.getElementById('btn-b');
+var btnC = document.getElementById('btn-c');
+var btnD = document.getElementById('btn-d');
 
 // Beginning main function that contains timer and quiz questions
-
 var beginQuiz = function countdown() {
     // Welcome Page disappears on click (click event below)
     function changeVisibility(){
@@ -80,6 +29,7 @@ var beginQuiz = function countdown() {
         quizDiv.setAttribute("style", "visibility: visible;");
     };
 
+changeVisibility();
 
 //Begin Timer
   var timeLeft = 76; //quiz time in msec, multiplied by 1000 below to covert to seconds
@@ -103,67 +53,59 @@ var beginQuiz = function countdown() {
 
   }, 1000);
 
+//Begin Quiz Questions
+function mainQuiz(){
 
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-
-// Welcome Page disappears on click (click event below)
-    function changeVisibility(){
-        welcomePage.setAttribute("style", "display: none; ");
-        quizDiv.setAttribute("style", "visibility: visible;");
+    function questionOne(){
+        quizQuestion.textContent = "Sample Question 1"; 
+        answer1.textContent = "aSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
     };
-    
-    changeVisibility();
+    questionOne();
+
+    function questionTwo(){
+        quizQuestion.textContent = "Sample Question 2"; 
+        answer1.textContent = "bSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionTwo();
+
+    function questionThree(){
+        quizQuestion.textContent = "Sample Question 3"; 
+        answer1.textContent = "cSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionThree();
+
+    function questionFour(){
+        quizQuestion.textContent = "Sample Question 4"; 
+        answer1.textContent = "dSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+     };
+     questionFour();
+
+    function questionFive(){
+        quizQuestion.textContent = "Sample Question 5"; 
+        answer1.textContent = "eSample Answer 1"; 
+        answer2.textContent = "Sample Answer 2"; 
+        answer3.textContent = "Sample Answer 3"; 
+        answer4.textContent = "Sample Answer 4"; 
+    };
+    questionFive();
 }
 
-getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+mainQuiz();
 
-        return window.location.assign('/end.html');
-    }
-    questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex];
-    question.innerText = currentQuestion.question;
+};
 
-    choices.forEach(choice => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    })
 
-    availableQuestions.splice(questionsIndex, 1);
-
-    acceptingAnswers = true;
-}
-
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-        acceptingAnswers = false;
-
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-
-        if(classToApply === 'correct'){
-            incrementScore (SCORE_POINTS)
-        }
-        selectedChoice.parentElement.classList.remove(classToApply);
-        getNewQuestion();
-    }, 1000)
-})
-
-incrementScore = num => {
-    score += num;
-    scoreText.innerText = score;
-}
-}
-
+//Quiz/timer starts when start quiz button is clicked
 startBtn.addEventListener("click", beginQuiz);
