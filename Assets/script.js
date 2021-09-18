@@ -91,33 +91,33 @@ var choiceA = function(){
   };
 var choiceB = function(){
   if(btnB.dataset.answer === "true"){
-      console.log("YAY")
+      console.log("YAY");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     } else {
-      console.log("BOO")
+      console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     }
   };
 var choiceC = function(){
   if(btnC.dataset.answer === "true"){
-      console.log("YAY")
+      console.log("YAY");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     } else {
-      console.log("BOO")
+      console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     }
   };
 var choiceD = function(){
   if(btnD.dataset.answer === "true"){
-      console.log("YAY")
+      console.log("YAY");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     } else {
-      console.log("BOO")
+      console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
     }
@@ -127,7 +127,7 @@ var choiceD = function(){
 //Q2
 var choiceA2 = function(){
   if(btnA2.dataset.answer === "true"){
-      console.log("YAY")
+      console.log("YAY");
       quizDiv3.setAttribute("style", "visibility: visible;");
       quizDiv2.setAttribute("style", "display: none;");
     } else {
@@ -136,7 +136,6 @@ var choiceA2 = function(){
       quizDiv2.setAttribute("style", "display: none;");
     }
   };
-
   var choiceB2 = function(){
     if(btnB2.dataset.answer === "true"){
         console.log("YAY")
@@ -275,7 +274,7 @@ btnB.addEventListener("click", choiceB);
 btnC.addEventListener("click", choiceC);
 btnD.addEventListener("click", choiceD);
 
-
+btnA2.addEventListener("click", choiceA2);
 btnB2.addEventListener("click", choiceB2);
 btnC2.addEventListener("click", choiceC2);
 btnD2.addEventListener("click", choiceD2);
