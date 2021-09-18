@@ -220,37 +220,46 @@ var choiceA2 = function(){
   var choiceA4 = function(){
     if(btnA4.dataset.answer === "true"){
       console.log("YAY")
+      finalPage.setAttribute("style", "display: inline;");
+      quizDiv4.setAttribute("style", "display: none;");
 
       } else {
         console.log("BOO")
-
+        finalPage.setAttribute("style", "display: inline;");
+        quizDiv4.setAttribute("style", "display: none;");
       }
     };
   var choiceB4 = function(){
     if(btnB4.dataset.answer === "true"){
         console.log("YAY")
-  
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");  
       } else {
         console.log("BOO")
-
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");
       }
     };
   var choiceC4 = function(){
     if(btnC4.dataset.answer === "true"){
         console.log("YAY")
-
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");
       }
     };
   var choiceD4 = function(){
     if(btnD4.dataset.answer === "true"){
         console.log("YAY")
-
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-
+        finalPage.setAttribute("style", "visibility: visible;");
+        quizDiv4.setAttribute("style", "display: none;");
       }
     };
 
