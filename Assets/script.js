@@ -52,7 +52,9 @@ function pauseTimer(){
 };
 
 function wrongAnswer(){
-  c=c-10;
+  finalScore = c-10;
+  pauseTimer(finalScore);
+  timerEl.textContent = "Time: " + finalScore;
 }
 
 // Beginning main function that contains timer and quiz questions
@@ -89,7 +91,7 @@ var choiceA = function(){
     console.log("BOO")
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceB = function(){
@@ -101,7 +103,7 @@ var choiceB = function(){
     console.log("BOO");
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceC = function(){
@@ -113,7 +115,7 @@ var choiceC = function(){
     console.log("BOO");
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceD = function(){
@@ -125,7 +127,7 @@ var choiceD = function(){
     console.log("BOO");
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 
@@ -140,7 +142,7 @@ var choiceA2 = function(){
     console.log("BOO")
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceB2 = function(){
@@ -152,7 +154,7 @@ var choiceB2 = function(){
     console.log("BOO")
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceC2 = function(){
@@ -164,7 +166,7 @@ var choiceC2 = function(){
     console.log("BOO")
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceD2 = function(){
@@ -176,7 +178,7 @@ var choiceD2 = function(){
     console.log("BOO")
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 //Q3
@@ -189,7 +191,7 @@ var choiceA3 = function(){
     console.log("BOO")
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceB3 = function(){
@@ -201,7 +203,7 @@ var choiceB3 = function(){
     console.log("BOO")
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceC3 = function(){
@@ -213,7 +215,7 @@ var choiceC3 = function(){
     console.log("BOO")
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 var choiceD3 = function(){
@@ -225,7 +227,7 @@ var choiceD3 = function(){
     console.log("BOO")
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
-    wrongAnswer();
+    c=c-10;
   }
 };
 
@@ -239,7 +241,6 @@ var choiceA4 = function(){
   } else {
     console.log("BOO")
     wrongAnswer();
-    pauseTimer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
   }
@@ -253,7 +254,6 @@ var choiceB4 = function(){
   } else {
     console.log("BOO")
     wrongAnswer();
-    pauseTimer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
   }
@@ -267,7 +267,6 @@ var choiceC4 = function(){
   } else {
     console.log("BOO")
     wrongAnswer();
-    pauseTimer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
   }
@@ -281,7 +280,6 @@ var choiceD4 = function(){
   } else {
     console.log("BOO")
     wrongAnswer();
-    pauseTimer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
   }
