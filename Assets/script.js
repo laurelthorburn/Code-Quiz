@@ -7,10 +7,13 @@ var quizDiv3 = document.getElementById('quiz3'); //Question 3 Container
 var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
+var scorePage = document.getElementById('score-page');
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
 var saveBtn = document.getElementById('save-btn');
+var clearBtn = document.getElementById('clear-btn');
+var repeatBtn = document.getElementById('repeat-btn');
 
 var btnA = document.getElementById('btn-a');
 var btnB = document.getElementById('btn-b');
@@ -333,6 +336,23 @@ var choiceD4 = function(){
 };
 
 //Final Page
+var saveScore = function(){
+  scorePage.setAttribute("style", "visibility: visible;");
+  finalPage.setAttribute("style", "display: none;");
+};
+
+//High Score Page
+var playAgain = function(){
+//how do i restart the game? 
+console.log("help me");
+};
+
+var eraseScores = function(){
+  console.log("Someday I'll clear the local storage...stay tuned");
+}
+
+//Creating Saved Scores using Local Storage
+
 
 //Quiz/timer starts when start quiz button is clicked
 startBtn.addEventListener("click", beginQuiz);
@@ -356,3 +376,7 @@ btnA4.addEventListener("click", choiceA4);
 btnB4.addEventListener("click", choiceB4);
 btnC4.addEventListener("click", choiceC4);
 btnD4.addEventListener("click", choiceD4);
+
+saveBtn.addEventListener("click", saveScore);
+repeatBtn.addEventListener("click", playAgain);
+clearBtn.addEventListener("click", eraseScores);

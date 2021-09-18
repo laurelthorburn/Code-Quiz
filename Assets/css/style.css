@@ -120,7 +120,8 @@ ol button {
     padding: 25px;
 }
 
+#repeat-btn,
 #clear-btn {
-    width: 130px;
+    width: 200px;
     margin-top: 5px;
 }
