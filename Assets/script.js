@@ -52,7 +52,7 @@ function wrongAnswer(){
   c = c-10;
   pauseTimer(c);
   timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
-  window.setTimeout(closeResult, 5000 );
+  window.setTimeout(closeResult, 2000 );
 }
 
 // make result text disappear
@@ -267,6 +267,7 @@ var choiceA4 = function(){
     finalPage.setAttribute("style", "display: inline;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
+    window.setTimeout(closeResult, 2000 );
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
@@ -282,6 +283,7 @@ var choiceB4 = function(){
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
+    window.setTimeout(closeResult, 2000 );
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
@@ -297,6 +299,7 @@ var choiceC4 = function(){
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
+    window.setTimeout(closeResult, 2000 );
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
@@ -312,6 +315,7 @@ var choiceD4 = function(){
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
+    window.setTimeout(closeResult, 2000 );
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
