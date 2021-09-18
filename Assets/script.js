@@ -8,7 +8,6 @@ var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
-// var userName = document.querySelector("user-init");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -343,9 +342,6 @@ var choiceD4 = function(){
   }
 };
 
-
-
-
 //Final Page
 var saveScore = function(){
   scorePage.setAttribute("style", "visibility: visible;");
@@ -353,19 +349,19 @@ var saveScore = function(){
   userScore = c;
   userName = document.getElementById("user-init").value;
 // Storing Data
-var myObj = {
+var myScore = {
   name: userName,
   score: userScore,
 }
 
-var myJSON = JSON.stringify(myObj);
-localStorage.setItem("testJSON", myJSON);
+var userInfo = JSON.stringify(myScore);
+localStorage.setItem("User Info: ", userInfo);
 
 //Retrieving Data
-let text = localStorage.getItem("testJSON");
-let obj = JSON.parse(text);
-document.getElementById("saved-name").innerHTML = obj.name;
-document.getElementById("saved-score").innerHTML = obj.score;
+let text = localStorage.getItem("User Info: ");
+let user = JSON.parse(text);
+document.getElementById("saved-name").innerHTML = user.name;
+document.getElementById("saved-score").innerHTML = user.score;
 };
 
 //High Score Page
