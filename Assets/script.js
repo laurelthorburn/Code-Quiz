@@ -8,6 +8,7 @@ var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
+// var userName = document.querySelector("user-init");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -35,12 +36,11 @@ var btnB4 = document.getElementById('btn-b4');
 var btnC4 = document.getElementById('btn-c4');
 var btnD4 = document.getElementById('btn-d4');
 
-var c = 10; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
+var c = 40; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
 var t;
 var timer_is_on = 0;
 
-//Creating Saved Scores using Local Storage
-var score = localStorage.getItem("c");
+var userScore;
 
 function timedCount(){
   timerEl.textContent = "Time: " + c;
@@ -65,13 +65,15 @@ function pauseTimer(){
 
 function wrongAnswer(){
   c = c-10;
+  if(c <= 0){
+    c = 0;
+    timerEl.textContent = "Time: " + c;
+  };
   pauseTimer(c);
   timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
   window.setTimeout(closeResult, 2000 );
-  localStorage.setItem("score", c)
+  localStorage.setItem("Final Score: ", c)
 };
-
-
 
 // make result text disappear
 function closeResult(){
@@ -341,22 +343,38 @@ var choiceD4 = function(){
   }
 };
 
+
+
+
 //Final Page
 var saveScore = function(){
   scorePage.setAttribute("style", "visibility: visible;");
   finalPage.setAttribute("style", "display: none;");
+  userScore = c;
+  userName = document.getElementById("user-init").value;
+// Storing Data
+var myObj = {
+  name: userName,
+  score: userScore,
+}
+
+var myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+//Retrieving Data
+let text = localStorage.getItem("testJSON");
+let obj = JSON.parse(text);
+document.getElementById("saved-name").innerHTML = obj.name;
+document.getElementById("saved-score").innerHTML = obj.score;
 };
 
 //High Score Page
 var playAgain = function(){
-//how do i restart the game? 
-console.log("help me");
 location.reload(); //confirm this is the code I want
 };
 
 var eraseScores = function(){
-  console.log("Someday I'll clear the local storage...stay tuned");
-  localStorage.removeItem("key"); //define key
+  window.localStorage.clear();
 }
 
 //Quiz/timer starts when start quiz button is clicked
