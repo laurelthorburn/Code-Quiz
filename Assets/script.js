@@ -15,7 +15,10 @@ var btnB = document.getElementById('btn-b');
 var btnC = document.getElementById('btn-c');
 var btnD = document.getElementById('btn-d');
 
-var btnA2;
+var btnA2 = document.getElementById('btn-a2');
+var btnB2 = document.getElementById('btn-b2');
+var btnC2 = document.getElementById('btn-c2');
+var btnD2 = document.getElementById('btn-d2');
 
 var btnA3 = document.getElementById('btn-a3');
 var btnB3 = document.getElementById('btn-b3');
@@ -120,24 +123,20 @@ var choiceD = function(){
     }
   };
 
-  var btnB2 = document.getElementById('btn-b2');
-  var btnC2 = document.getElementById('btn-c2');
-  var btnD2 = document.getElementById('btn-d2');
   
-
 //Q2
-  var choiceA2 = function(){
-    if(btnA2.dataset.answer === "true"){
+var choiceA2 = function(){
+  if(btnA2.dataset.answer === "true"){
       console.log("YAY")
-      console.log("WOO")
       quizDiv3.setAttribute("style", "visibility: visible;");
       quizDiv2.setAttribute("style", "display: none;");
-      } else {
-        console.log("BOO")
-        quizDiv2.setAttribute("style", "visibility: visible;");
-        quizDiv1.setAttribute("style", "display: none;");
-      }
-    };
+    } else {
+      console.log("BOO")
+      quizDiv3.setAttribute("style", "visibility: visible;");
+      quizDiv2.setAttribute("style", "display: none;");
+    }
+  };
+
   var choiceB2 = function(){
     if(btnB2.dataset.answer === "true"){
         console.log("YAY")
@@ -221,45 +220,45 @@ var choiceD = function(){
   var choiceA4 = function(){
     if(btnA4.dataset.answer === "true"){
       console.log("YAY")
-      quizDiv3.setAttribute("style", "visibility: visible;");
-      quizDiv2.setAttribute("style", "display: none;");
+      quizDiv4.setAttribute("style", "visibility: visible;");
+      quizDiv3.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       }
     };
   var choiceB4 = function(){
     if(btnB4.dataset.answer === "true"){
         console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       }
     };
   var choiceC4 = function(){
     if(btnC4.dataset.answer === "true"){
         console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       }
     };
   var choiceD4 = function(){
     if(btnD4.dataset.answer === "true"){
         console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       } else {
         console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
       }
     };
 

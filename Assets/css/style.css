@@ -66,7 +66,6 @@ button:hover{
 /* why won't display:none work anymore??? */
 .quiz {
     display: hidden;
-    background-color: seagreen;
     width: 100%;
     height: auto;
     display: flex;
@@ -75,7 +74,6 @@ button:hover{
 }
 
 .quiz-question {
-    background-color: turquoise;
     width: 500px;
     display: flex;
     align-self: center;
@@ -91,7 +89,6 @@ ol {
     margin: 10px 0 10px 10px;
     padding: 10px 0;
     justify-items: start;
-    background-color: steelblue;
     align-self: center;
 }
 
@@ -100,8 +97,4 @@ ol button {
     padding: 0 5px;
     margin: 2px 0 2px 30px;
     align-self: flex-start;
-}
-
-li {
-background-color: violet;
 }
