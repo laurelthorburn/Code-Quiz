@@ -64,8 +64,8 @@ button:hover{
 }
 
 /* why won't display:none work anymore??? */
-#quiz {
-    visibility: hidden;
+.quiz {
+    display: hidden;
     background-color: seagreen;
     width: 100%;
     height: auto;
@@ -74,7 +74,7 @@ button:hover{
     margin-top: 50px;
 }
 
-#quiz-question {
+.quiz-question {
     background-color: turquoise;
     width: 500px;
     display: flex;

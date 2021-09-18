@@ -15,21 +15,53 @@
         <h2 id="view-hs">View High Scores</h2>
         <h2 id="countdown">Time: 0 seconds</h2>
     </div>
-        <div id="welcome-page">
-            <h1>Welcome to Laurel's Coding Quiz Challenge 🦹‍♀️</h1>
-            <p id="welcome-p">Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score and time by ten seconds! Want to try to beat your high score?  Play again!</p>
-            <button id="begin-btn">Start Quiz</button>
-        </div>
 
-        <div id="quiz">
-        <h1 id="quiz-question"></h1>
+    <div id="welcome-page">
+        <h1>Welcome to Laurel's Coding Quiz Challenge 🦹‍♀️</h1>
+        <p id="welcome-p">Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score and time by ten seconds! Want to try to beat your high score?  Play again!</p>
+        <button id="begin-btn">Start Quiz</button>
+    </div>
+
+    <div class="quiz" id ="quiz1">
+        <h1 id="quiz-question1" class = "quiz-question">Inside which HTML element do we put the JavaScript?</h1>
         <ol>
-            <button id ="btn-a"><li id="li1"></li></button>
-            <button id ="btn-b"><li id="li2"></li></button>
-            <button id ="btn-c"><li id="li3"></li></button>
-            <button id ="btn-d"><li id="li4"></li></button>
+            <button id ="btn-a" class = "choices" data-answer = "true"><li id="li1a">&lt;script&gt;</li></button>
+            <button id ="btn-b" class = "choices" data-answer = "false"><li id="li1b">&lt;javascript&gt;</li></button>
+            <button id ="btn-c" class = "choices" data-answer = "false"><li id="li1c">&lt;help&gt;</li></button>
+            <button id ="btn-d" class = "choices" data-answer = "false"><li id="li1d">&lt;js&gt;</li></button>
         </ol>
-        </div>
+    </div>
+
+    <div class="quiz" id ="quiz2">
+        <h1 id="quiz-question2" class = "quiz-question">Where is the correct place to insert a JavaScript?</h1>
+        <ol>
+            <button id ="btn-a2" class = "choices" data-answer = "false"><li id="li2a">Anywhere I want, #freedom</li></button>
+            <button id ="btn-b2" class = "choices" data-answer = "true"><li id="li2b">The &lt;body&gt; section</li></button>
+            <button id ="btn-c2" class = "choices" data-answer = "false"><li id="li2c">The &lt;head&gt; section</li></button>
+            <button id ="btn-d2" class = "choices" data-answer = "false"><li id="li2d">In the page&lt;title&gt;</li></button>
+        </ol>
+    </div>
+
+
+    <div class="quiz" id ="quiz3">
+        <h1 id="quiz-question3" class = "quiz-question">How do you write "Hello World" in an alert box?</h1>
+        <ol>
+            <button id ="btn-a3" class = "choices" data-answer = "true"><li id="li3a">alert("Hello World");</li></button>
+            <button id ="btn-b3" class = "choices" data-answer = "false"><li id="li3b">msg("Hello World");</li></button>
+            <button id ="btn-c3" class = "choices" data-answer = "false"><li id="li3c">alertBox("Hello World");</li></button>
+            <button id ="btn-d3" class = "choices" data-answer = "false"><li id="li3d">msgBox("Hello World");</li></button>
+        </ol>
+    </div>
+    
+    <div class="quiz" id ="quiz4">
+        <h1 id="quiz-question4" class = "quiz-question">INSERT Q4</h1>
+        <ol>
+            <button id ="btn-a4" class = "choices" data-answer = "false"><li id="li4a">INSERT TEXT HERE 4-1</li></button>
+            <button id ="btn-b4" class = "choices" data-answer = "false"><li id="li4b">INSERT TEXT HERE 4-2</li></button>
+            <button id ="btn-c4" class = "choices" data-answer = "false"><li id="li4c">INSERT TEXT HERE 4-3</li></button>
+            <button id ="btn-d4" class = "choices" data-answer = "true"><li id="li4d">INSERT TEXT HERE 4-4</li></button>
+        </ol>
+    </div>
 
         <!-- <button id="submit-btn">Submit</button> -->
 
