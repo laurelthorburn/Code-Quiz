@@ -173,52 +173,6 @@ var choiceA2 = function(){
   var choiceA3 = function(){
     if(btnA3.dataset.answer === "true"){
       console.log("YAY")
-      quizDiv3.setAttribute("style", "visibility: visible;");
-      quizDiv2.setAttribute("style", "display: none;");
-      } else {
-        console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      }
-    };
-  var choiceB3 = function(){
-    if(btnB3.dataset.answer === "true"){
-        console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      } else {
-        console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      }
-    };
-  var choiceC3 = function(){
-    if(btnC3.dataset.answer === "true"){
-        console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      } else {
-        console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      }
-    };
-  var choiceD3 = function(){
-    if(btnD3.dataset.answer === "true"){
-        console.log("YAY")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      } else {
-        console.log("BOO")
-        quizDiv3.setAttribute("style", "visibility: visible;");
-        quizDiv2.setAttribute("style", "display: none;");
-      }
-    };
-
-//Q4
-  var choiceA4 = function(){
-    if(btnA4.dataset.answer === "true"){
-      console.log("YAY")
       quizDiv4.setAttribute("style", "visibility: visible;");
       quizDiv3.setAttribute("style", "display: none;");
       } else {
@@ -227,8 +181,8 @@ var choiceA2 = function(){
         quizDiv3.setAttribute("style", "display: none;");
       }
     };
-  var choiceB4 = function(){
-    if(btnB4.dataset.answer === "true"){
+  var choiceB3 = function(){
+    if(btnB3.dataset.answer === "true"){
         console.log("YAY")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
@@ -236,28 +190,66 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
+      }
+    };
+  var choiceC3 = function(){
+    if(btnC3.dataset.answer === "true"){
+        console.log("YAY")
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
+      } else {
+        console.log("BOO")
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
+      }
+    };
+  var choiceD3 = function(){
+    if(btnD3.dataset.answer === "true"){
+        console.log("YAY")
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
+      } else {
+        console.log("BOO")
+        quizDiv4.setAttribute("style", "visibility: visible;");
+        quizDiv3.setAttribute("style", "display: none;");
+      }
+    };
+
+//Q4
+  var choiceA4 = function(){
+    if(btnA4.dataset.answer === "true"){
+      console.log("YAY")
+
+      } else {
+        console.log("BOO")
+
+      }
+    };
+  var choiceB4 = function(){
+    if(btnB4.dataset.answer === "true"){
+        console.log("YAY")
+  
+      } else {
+        console.log("BOO")
+
       }
     };
   var choiceC4 = function(){
     if(btnC4.dataset.answer === "true"){
         console.log("YAY")
-        quizDiv4.setAttribute("style", "visibility: visible;");
-        quizDiv3.setAttribute("style", "display: none;");
+
       } else {
         console.log("BOO")
-        quizDiv4.setAttribute("style", "visibility: visible;");
-        quizDiv3.setAttribute("style", "display: none;");
+
       }
     };
   var choiceD4 = function(){
     if(btnD4.dataset.answer === "true"){
         console.log("YAY")
-        quizDiv4.setAttribute("style", "visibility: visible;");
-        quizDiv3.setAttribute("style", "display: none;");
+
       } else {
         console.log("BOO")
-        quizDiv4.setAttribute("style", "visibility: visible;");
-        quizDiv3.setAttribute("style", "display: none;");
+
       }
     };
 
