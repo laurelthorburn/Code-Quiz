@@ -1,14 +1,15 @@
 //Global variables
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
 var welcomePage = document.getElementById('welcome-page'); //Welcome Page
-var quizDiv1 = document.getElementById('quiz1'); //Main Quiz Container
-var quizDiv2 = document.getElementById('quiz2'); //Main Quiz Container
-var quizDiv3 = document.getElementById('quiz3'); //Main Quiz Container
-var quizDiv4 = document.getElementById('quiz4'); //Main Quiz Container
+var quizDiv1 = document.getElementById('quiz1'); //Question 1 Container
+var quizDiv2 = document.getElementById('quiz2'); //Question 2 Container
+var quizDiv3 = document.getElementById('quiz3'); //Question 3 Container
+var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
+var finalPage = document.getElementById("final-page");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
-var submitBtn = document.getElementById('submit-btn');
+var saveBtn = document.getElementById('save-btn');
 
 var btnA = document.getElementById('btn-a');
 var btnB = document.getElementById('btn-b');

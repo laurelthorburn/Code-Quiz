@@ -28,17 +28,20 @@ h2 {
     padding: 0 10px;
 }
 
-#welcome-page{
+#welcome-page,
+#final-page {
     margin: 50px;
     display: flex;
     flex-direction: column;
 }
 
-#welcome-page > h1 {
+#welcome-page > h1,
+#final-page > h1 {
      text-align: center;
 }
 
-#welcome-p{
+#welcome-p,
+#final-p {
     width: 800px;
     height: auto;
     align-self: center;
@@ -97,4 +100,13 @@ ol button {
     padding: 0 5px;
     margin: 2px 0 2px 30px;
     align-self: flex-start;
+}
+
+#user-init {
+    width: 50px;
+    margin: 10px;
+}
+
+#final-page {
+    display: none;
 }
