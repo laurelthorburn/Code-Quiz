@@ -35,15 +35,27 @@ var btnB4 = document.getElementById('btn-b4');
 var btnC4 = document.getElementById('btn-c4');
 var btnD4 = document.getElementById('btn-d4');
 
-
-var c = 1; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
+var c = 10; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
 var t;
 var timer_is_on = 0;
 
+//Creating Saved Scores using Local Storage
+var score = localStorage.getItem("c");
+
 function timedCount(){
   timerEl.textContent = "Time: " + c;
-  c=c-1;
+  c = c-1;
   t = setTimeout(timedCount, 1000);
+if(c <= 0){
+  c = 0;
+  timerEl.textContent = "Time: " + c;
+  window.setTimeout(closeResult, 2000 );
+  quizDiv1.setAttribute("style", "display: none;");
+  quizDiv2.setAttribute("style", "display: none;");
+  quizDiv3.setAttribute("style", "display: none;");
+  quizDiv4.setAttribute("style", "display: none;");
+  finalPage.setAttribute("style", "visibility: visible;");
+  };
 };
 
 function pauseTimer(){
@@ -56,7 +68,10 @@ function wrongAnswer(){
   pauseTimer(c);
   timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
   window.setTimeout(closeResult, 2000 );
+  localStorage.setItem("score", c)
 };
+
+
 
 // make result text disappear
 function closeResult(){
@@ -69,16 +84,7 @@ var beginQuiz = function countdown() {
 if(!timer_is_on){
   timer_is_on = 1;
   timedCount();
-} else if(c === 0){
-  clearTimeout(t);
-  timerEl.textContent = "Time: " + c + "!";
-  quizDiv1.setAttribute("style", "display: none;");
-  quizDiv2.setAttribute("style", "display: none;");
-  quizDiv3.setAttribute("style", "display: none;");
-  quizDiv4.setAttribute("style", "display: none;");
-  finalPage.setAttribute("style", "visibility: visible;");
-  };
-
+};
   // Welcome Page disappears on click (click event below)
   function changeVisibility1(){
     welcomePage.setAttribute("style", "display: none; ");
@@ -350,10 +356,8 @@ location.reload(); //confirm this is the code I want
 
 var eraseScores = function(){
   console.log("Someday I'll clear the local storage...stay tuned");
+  localStorage.removeItem("key"); //define key
 }
-
-//Creating Saved Scores using Local Storage
-
 
 //Quiz/timer starts when start quiz button is clicked
 startBtn.addEventListener("click", beginQuiz);
