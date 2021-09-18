@@ -1,7 +1,3 @@
-// Ok to break the code by attempting the timer... you got this, babe!
-
-
-
 //Global variables
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
 var welcomePage = document.getElementById('welcome-page'); //Welcome Page
@@ -9,7 +5,8 @@ var quizDiv1 = document.getElementById('quiz1'); //Question 1 Container
 var quizDiv2 = document.getElementById('quiz2'); //Question 2 Container
 var quizDiv3 = document.getElementById('quiz3'); //Question 3 Container
 var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
-var finalPage = document.getElementById("final-page");
+var userVerdict = document.getElementById('verdict');
+var finalPage = document.getElementById('final-page');
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -52,9 +49,9 @@ function pauseTimer(){
 };
 
 function wrongAnswer(){
-  finalScore = c-10;
-  pauseTimer(finalScore);
-  timerEl.textContent = "Time: " + finalScore;
+  c = c-10;
+  pauseTimer(c);
+  timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
 }
 
 // Beginning main function that contains timer and quiz questions
@@ -85,22 +82,26 @@ quizDiv4.setAttribute("style", "display: none;");
 var choiceA = function(){
   if(btnA.dataset.answer === "true"){
   console.log("YAY")
+  userVerdict.innerText = "Correct!";
   quizDiv2.setAttribute("style", "visibility: visible;");
   quizDiv1.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
-    quizDiv2.setAttribute("style", "visibility: visible;");
-    quizDiv1.setAttribute("style", "display: none;");
-    c=c-10;
+  console.log("BOO")
+  userVerdict.innerText = "Incorrect!";
+  quizDiv2.setAttribute("style", "visibility: visible;");
+  quizDiv1.setAttribute("style", "display: none;");
+  c=c-10;
   }
 };
 var choiceB = function(){
   if(btnB.dataset.answer === "true"){
     console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
   } else {
     console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
     c=c-10;
@@ -109,10 +110,12 @@ var choiceB = function(){
 var choiceC = function(){
   if(btnC.dataset.answer === "true"){
     console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
   } else {
     console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
     c=c-10;
@@ -121,10 +124,12 @@ var choiceC = function(){
 var choiceD = function(){
   if(btnD.dataset.answer === "true"){
     console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
   } else {
     console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
     c=c-10;
@@ -136,10 +141,12 @@ var choiceD = function(){
 var choiceA2 = function(){
   if(btnA2.dataset.answer === "true"){
     console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
     c=c-10;
@@ -147,11 +154,13 @@ var choiceA2 = function(){
 };
 var choiceB2 = function(){
   if(btnB2.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
     c=c-10;
@@ -159,11 +168,13 @@ var choiceB2 = function(){
 };
 var choiceC2 = function(){
   if(btnC2.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
     c=c-10;
@@ -171,11 +182,13 @@ var choiceC2 = function(){
 };
 var choiceD2 = function(){
   if(btnD2.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv3.setAttribute("style", "visibility: visible;");
     quizDiv2.setAttribute("style", "display: none;");
     c=c-10;
@@ -184,11 +197,13 @@ var choiceD2 = function(){
 //Q3
 var choiceA3 = function(){
   if(btnA3.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
     c=c-10;
@@ -196,11 +211,13 @@ var choiceA3 = function(){
 };
 var choiceB3 = function(){
   if(btnB3.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
     c=c-10;
@@ -208,11 +225,13 @@ var choiceB3 = function(){
 };
 var choiceC3 = function(){
   if(btnC3.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
     c=c-10;
@@ -220,11 +239,13 @@ var choiceC3 = function(){
 };
 var choiceD3 = function(){
   if(btnD3.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     quizDiv4.setAttribute("style", "visibility: visible;");
     quizDiv3.setAttribute("style", "display: none;");
     c=c-10;
@@ -234,12 +255,14 @@ var choiceD3 = function(){
 //Q4
 var choiceA4 = function(){
   if(btnA4.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     finalPage.setAttribute("style", "display: inline;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -247,12 +270,14 @@ var choiceA4 = function(){
 };
 var choiceB4 = function(){
   if(btnB4.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -260,12 +285,14 @@ var choiceB4 = function(){
 };
 var choiceC4 = function(){
   if(btnC4.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -273,12 +300,14 @@ var choiceC4 = function(){
 };
 var choiceD4 = function(){
   if(btnD4.dataset.answer === "true"){
-    console.log("YAY")
+    console.log("YAY");
+    userVerdict.innerText = "Correct!";
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
   } else {
-    console.log("BOO")
+    console.log("BOO");
+    userVerdict.innerText = "Incorrect!";
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");

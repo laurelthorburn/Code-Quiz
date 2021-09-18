@@ -28,6 +28,13 @@ h2 {
     padding: 0 10px;
 }
 
+.verdict {
+    text-align: center;
+    font-style: italic;
+    border: black 2px dashed;
+    padding: 3px;
+}
+
 #welcome-page,
 #final-page {
     margin: 50px;
@@ -37,7 +44,7 @@ h2 {
 
 #welcome-page > h1,
 #final-page > h1 {
-     text-align: center;
+    text-align: center;
 }
 
 #welcome-p {
@@ -65,7 +72,6 @@ button:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/* why won't display:none work anymore??? */
 .quiz {
     display: hidden;
     width: 100%;
