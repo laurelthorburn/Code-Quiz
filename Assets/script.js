@@ -345,6 +345,7 @@ var saveScore = function(){
 var playAgain = function(){
 //how do i restart the game? 
 console.log("help me");
+location.reload(); //confirm this is the code I want
 };
 
 var eraseScores = function(){
