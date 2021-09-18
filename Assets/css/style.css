@@ -30,9 +30,6 @@ h2 {
 
 .verdict {
     text-align: center;
-    font-style: italic;
-    border: black 2px dashed;
-    padding: 3px;
 }
 
 #welcome-page,
@@ -40,6 +37,7 @@ h2 {
     margin: 50px;
     display: flex;
     flex-direction: column;
+    
 }
 
 #welcome-page > h1,
