@@ -1,3 +1,7 @@
+// Ok to break the code by attempting the timer... you got this, babe!
+
+
+
 //Global variables
 var timerEl = document.getElementById('countdown'); //grabs timer from index, location on page for timer
 var welcomePage = document.getElementById('welcome-page'); //Welcome Page
@@ -32,31 +36,28 @@ var btnC4 = document.getElementById('btn-c4');
 var btnD4 = document.getElementById('btn-d4');
 
 
-var timeLeft = 41; //quiz time in msec, multiplied by 1000 below to covert to seconds
+var c = 40; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
+var t;
+var timer_is_on = 0;
 
+function timedCount(){
+  timerEl.textContent = "Time: " + c;
+  c=c-1;
+  t = setTimeout(timedCount, 1000);
+};
+
+function pauseTimer(){
+  clearTimeout(t);
+  timer_is_on = 0;
+};
 
 // Beginning main function that contains timer and quiz questions
 var beginQuiz = function countdown() {
-//Begin Timer
-
-var timeInterval = setInterval(function () {
-  timeLeft--; //Begins the countdown
-
-  timerEl.textContent = "Time: " + timeLeft + " seconds"; 
-
-  if (timeLeft === 1) { 
-    timerEl.textContent = "Time: " + timeLeft + " second";
-  }
-
-  if(timeLeft === 0) { 
-    // Stops execution of action at set interval
-    clearInterval(timeInterval);
-    timerEl.textContent = "Time is up!";
-
-  //   displayMessage(); -- eventually this will be high score page?
-  }
-
-}, 1000);
+//Begin Timer on click event
+if(!timer_is_on){
+  timer_is_on = 1;
+  timedCount();
+}
 
   // Welcome Page disappears on click (click event below)
   function changeVisibility1(){
@@ -84,7 +85,7 @@ var choiceA = function(){
       console.log("BOO")
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
-      timeLeft = timeLeft - 10;
+      c = c - 10;
     }
   };
 var choiceB = function(){
@@ -96,7 +97,7 @@ var choiceB = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
-      timeLeft = timeLeft - 10;
+      c = c - 10;
     }
   };
 var choiceC = function(){
@@ -108,7 +109,7 @@ var choiceC = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
-      timeLeft = timeLeft - 10;
+      c = c - 10;
     }
   };
 var choiceD = function(){
@@ -120,7 +121,7 @@ var choiceD = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
-      timeLeft = timeLeft - 10;
+      c = c - 10;
     }
   };
 
@@ -135,7 +136,7 @@ var choiceA2 = function(){
       console.log("BOO")
       quizDiv3.setAttribute("style", "visibility: visible;");
       quizDiv2.setAttribute("style", "display: none;");
-      timeLeft = timeLeft - 10;
+      c = c - 10;
     }
   };
   var choiceB2 = function(){
@@ -147,7 +148,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
   var choiceC2 = function(){
@@ -159,7 +160,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
   var choiceD2 = function(){
@@ -171,7 +172,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
 //Q3
@@ -184,7 +185,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
   var choiceB3 = function(){
@@ -196,7 +197,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
   var choiceC3 = function(){
@@ -208,7 +209,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
   var choiceD3 = function(){
@@ -220,7 +221,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
+        c = c - 10;
       }
     };
 
@@ -230,24 +231,27 @@ var choiceA2 = function(){
       console.log("YAY")
       finalPage.setAttribute("style", "display: inline;");
       quizDiv4.setAttribute("style", "display: none;");
-
+      pauseTimer();
       } else {
         console.log("BOO")
-        finalPage.setAttribute("style", "display: inline;");
+        c = c - 10;
+        pauseTimer();
+        finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
       }
     };
   var choiceB4 = function(){
     if(btnB4.dataset.answer === "true"){
         console.log("YAY")
         finalPage.setAttribute("style", "visibility: visible;");
-        quizDiv4.setAttribute("style", "display: none;");  
+        quizDiv4.setAttribute("style", "display: none;");
+        pauseTimer();
       } else {
         console.log("BOO")
+        c = c - 10;
+        pauseTimer();
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
       }
     };
   var choiceC4 = function(){
@@ -255,11 +259,13 @@ var choiceA2 = function(){
         console.log("YAY")
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
+        pauseTimer();
       } else {
         console.log("BOO")
+        c = c - 10;
+        pauseTimer();
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
       }
     };
   var choiceD4 = function(){
@@ -267,18 +273,15 @@ var choiceA2 = function(){
         console.log("YAY")
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
+        pauseTimer();
       } else {
         console.log("BOO")
+        c = c - 10;
+        pauseTimer();
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
-        timeLeft = timeLeft - 10;
       }
     };
-
-    
-// function userClick(){
-//  if ()
-//   };
 
 //Quiz/timer starts when start quiz button is clicked
 startBtn.addEventListener("click", beginQuiz);
