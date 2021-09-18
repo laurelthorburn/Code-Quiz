@@ -52,7 +52,14 @@ function wrongAnswer(){
   c = c-10;
   pauseTimer(c);
   timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
+  window.setTimeout(closeResult, 5000 );
 }
+
+// make result text disappear
+function closeResult(){
+  userVerdict.style.display=" none";
+  }
+  
 
 // Beginning main function that contains timer and quiz questions
 var beginQuiz = function countdown() {
@@ -81,12 +88,12 @@ quizDiv4.setAttribute("style", "display: none;");
 //Q1
 var choiceA = function(){
   if(btnA.dataset.answer === "true"){
-  console.log("YAY")
+  console.log("YAY");
   userVerdict.innerText = "Correct!";
   quizDiv2.setAttribute("style", "visibility: visible;");
   quizDiv1.setAttribute("style", "display: none;");
   } else {
-  console.log("BOO")
+  console.log("BOO");
   userVerdict.innerText = "Incorrect!";
   quizDiv2.setAttribute("style", "visibility: visible;");
   quizDiv1.setAttribute("style", "display: none;");
