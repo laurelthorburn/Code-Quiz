@@ -32,7 +32,7 @@ var btnC4 = document.getElementById('btn-c4');
 var btnD4 = document.getElementById('btn-d4');
 
 
-var timeLeft = 76; //quiz time in msec, multiplied by 1000 below to covert to seconds
+var timeLeft = 41; //quiz time in msec, multiplied by 1000 below to covert to seconds
 
 
 // Beginning main function that contains timer and quiz questions
@@ -80,14 +80,11 @@ var choiceA = function(){
     console.log("YAY")
     quizDiv2.setAttribute("style", "visibility: visible;");
     quizDiv1.setAttribute("style", "display: none;");
- 
-
     } else {
       console.log("BOO")
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
-     
-
+      timeLeft = timeLeft - 10;
     }
   };
 var choiceB = function(){
@@ -99,6 +96,7 @@ var choiceB = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
+      timeLeft = timeLeft - 10;
     }
   };
 var choiceC = function(){
@@ -110,6 +108,7 @@ var choiceC = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
+      timeLeft = timeLeft - 10;
     }
   };
 var choiceD = function(){
@@ -121,6 +120,7 @@ var choiceD = function(){
       console.log("BOO");
       quizDiv2.setAttribute("style", "visibility: visible;");
       quizDiv1.setAttribute("style", "display: none;");
+      timeLeft = timeLeft - 10;
     }
   };
 
@@ -135,6 +135,7 @@ var choiceA2 = function(){
       console.log("BOO")
       quizDiv3.setAttribute("style", "visibility: visible;");
       quizDiv2.setAttribute("style", "display: none;");
+      timeLeft = timeLeft - 10;
     }
   };
   var choiceB2 = function(){
@@ -146,6 +147,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceC2 = function(){
@@ -157,6 +159,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceD2 = function(){
@@ -168,6 +171,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv3.setAttribute("style", "visibility: visible;");
         quizDiv2.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
 //Q3
@@ -180,6 +184,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceB3 = function(){
@@ -191,6 +196,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceC3 = function(){
@@ -202,6 +208,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceD3 = function(){
@@ -213,6 +220,7 @@ var choiceA2 = function(){
         console.log("BOO")
         quizDiv4.setAttribute("style", "visibility: visible;");
         quizDiv3.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
 
@@ -227,6 +235,7 @@ var choiceA2 = function(){
         console.log("BOO")
         finalPage.setAttribute("style", "display: inline;");
         quizDiv4.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceB4 = function(){
@@ -238,6 +247,7 @@ var choiceA2 = function(){
         console.log("BOO")
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceC4 = function(){
@@ -249,6 +259,7 @@ var choiceA2 = function(){
         console.log("BOO")
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
   var choiceD4 = function(){
@@ -260,6 +271,7 @@ var choiceA2 = function(){
         console.log("BOO")
         finalPage.setAttribute("style", "visibility: visible;");
         quizDiv4.setAttribute("style", "display: none;");
+        timeLeft = timeLeft - 10;
       }
     };
 
