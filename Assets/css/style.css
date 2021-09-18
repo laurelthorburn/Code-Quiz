@@ -6,6 +6,7 @@
 h1 {
     color: black;
     font-size: 30px;
+    text-align: center;
 }
 
 h2 {
@@ -33,16 +34,12 @@ h2 {
 }
 
 #welcome-page,
-#final-page {
+#final-page,
+#score-page {
     margin: 50px;
     display: flex;
     flex-direction: column;
     
-}
-
-#welcome-page > h1,
-#final-page > h1 {
-    text-align: center;
 }
 
 #welcome-p {
@@ -110,12 +107,20 @@ ol button {
     margin: 10px;
 }
 
-#final-page {
+#final-page,
+#score-page {
     visibility: hidden;
 }
-#final-p {
+
+#final-p,
+#score-p {
     width: 500px;
     height: auto;
     align-self: center;
     padding: 25px;
+}
+
+#clear-btn {
+    width: 130px;
+    margin-top: 5px;
 }

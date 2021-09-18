@@ -33,7 +33,7 @@ var btnC4 = document.getElementById('btn-c4');
 var btnD4 = document.getElementById('btn-d4');
 
 
-var c = 40; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
+var c = 1; //previously was timeLeft, changed to c to match w3 schools example (bless you, w3 schools ppl)
 var t;
 var timer_is_on = 0;
 
@@ -53,13 +53,12 @@ function wrongAnswer(){
   pauseTimer(c);
   timerEl.textContent = "Time: " + c; //changing display to reflect new counter after Q4 deducts point value
   window.setTimeout(closeResult, 2000 );
-}
+};
 
 // make result text disappear
 function closeResult(){
   userVerdict.style.display=" none";
-  }
-  
+  };
 
 // Beginning main function that contains timer and quiz questions
 var beginQuiz = function countdown() {
@@ -67,7 +66,15 @@ var beginQuiz = function countdown() {
 if(!timer_is_on){
   timer_is_on = 1;
   timedCount();
-}
+} else if(c === 0){
+  clearTimeout(t);
+  timerEl.textContent = "Time: " + c + "!";
+  quizDiv1.setAttribute("style", "display: none;");
+  quizDiv2.setAttribute("style", "display: none;");
+  quizDiv3.setAttribute("style", "display: none;");
+  quizDiv4.setAttribute("style", "display: none;");
+  finalPage.setAttribute("style", "visibility: visible;");
+  };
 
   // Welcome Page disappears on click (click event below)
   function changeVisibility1(){
@@ -324,7 +331,6 @@ var choiceD4 = function(){
     quizDiv4.setAttribute("style", "display: none;");
   }
 };
-
 
 //Final Page
 
