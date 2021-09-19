@@ -65,6 +65,7 @@
 <!-- Final Page Div -->
     <div id="final-page">
         <h1>Rep' that score! 👏 </h1>
+        <p id ="final-score"></p>
         <p id="final-p">Enter your initials to save your high score:
         <input type="text" id="user-init" required maxlength="2" required minlength="1" placeholder="Here!"></input></p>
         <button id="save-btn">Save Score</button>
@@ -72,15 +73,16 @@
 
 <!-- High Score Page Div -->
 <div id="score-page">
-    <h1>Check out these high scores. How'd you do? 🤷‍♀️</h1>
+    <h1>So, how'd you do? 🤷‍♀️</h1>
     <p id="score-p">
         Compare your score to others.  <br>
         Don't like your score? <i>Make it disappear!</i><br>
         Bored and want to play again? <u>Do it!</u>
     </p>
     <div class="card">
-        <p>Saved Name: <span id="saved-name"></span></p>
-        <p>Saved Score: <span id="saved-score"></span></p>
+        <ol id="highScores"></ol>
+        <!-- <p>Saved Name: <span id="saved-name"></span></p>
+        <p>Saved Score: <span id="saved-score"></span></p> -->
     </div>
     <button id="repeat-btn">I'm bored! #repeat</button>
     <button id="clear-btn">Score be gone! #vanish</button>

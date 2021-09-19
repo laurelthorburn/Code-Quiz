@@ -8,6 +8,7 @@ var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
+var highScores = document.getElementById("highScores");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -342,27 +343,40 @@ var choiceD4 = function(){
   }
 };
 
+var i;
+var userScore =[];
+
 //Final Page
 var saveScore = function(){
   scorePage.setAttribute("style", "visibility: visible;");
   finalPage.setAttribute("style", "display: none;");
   userScore = c;
   userName = document.getElementById("user-init").value;
-// Storing Data
+// Storing Data in an array
 var myScore = {
   name: userName,
   score: userScore,
 }
 
-var userInfo = JSON.stringify(myScore);
-localStorage.setItem("User Info: ", userInfo);
+// var userInfo = JSON.stringify(myScore); //stringify the array
+ //setting the array as a value in a key
 
-//Retrieving Data
-let text = localStorage.getItem("User Info: ");
-let user = JSON.parse(text);
-document.getElementById("saved-name").innerHTML = user.name;
-document.getElementById("saved-score").innerHTML = user.score;
+//Retrieving Data //grabbing the key
+
+sessionStorage.setItem("UserInfo", JSON.stringify(myScore));
+var user = JSON.parse(sessionStorage.getItem("UserInfo")); 
+// user.push(myScore);
+//parsing the key into a variable
+// document.getElementById("saved-name").innerHTML = user.name;
+// document.getElementById("saved-score").innerHTML = user.score;
+
+console.log("local storage");
+for (i = 0; i < sessionStorage.length; i++)   {
+    console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(localStorage.key(i)) + "]");
+}
+highScores.append(`${user.name} — ${user.score}`);
 };
+
 
 //High Score Page
 var playAgain = function(){
