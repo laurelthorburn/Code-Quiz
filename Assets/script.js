@@ -43,6 +43,14 @@ var timer_is_on = 0;
 
 var userScore;
 
+var timeDeduction = function(c){
+  if(c >= 10){
+    c-10;
+  } else {
+    c=0;
+  }
+};
+
 function timedCount(){
   timerEl.textContent = "Time: " + c;
   c = c-1;
@@ -291,7 +299,8 @@ var choiceA4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
-    displayScore.innerText = "Your Score: " + (c-10);
+    timeDeduction;
+    displayScore.innerText = "Your Score: " + c;
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -309,7 +318,8 @@ var choiceB4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
-    displayScore.innerText = "Your Score: " + (c-10);
+    timeDeduction;
+    displayScore.innerText = "Your Score: " + c;
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -327,7 +337,8 @@ var choiceC4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
-    displayScore.innerText = "Your Score: " + (c-10);
+    timeDeduction;
+    displayScore.innerText = "Your Score: " + c;
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -345,15 +356,13 @@ var choiceD4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
-    displayScore.innerText = "Your Score: " + (c-10);
+    timeDeduction;
+    displayScore.innerText = "Your Score: " + c;
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
   }
 };
-
-var i;
-var userScore =[];
 
 //Final Page
 var saveScore = function(){
@@ -361,31 +370,23 @@ var saveScore = function(){
   finalPage.setAttribute("style", "display: none;");
   userScore = c;
   userName = document.getElementById("user-init").value;
-// Storing Data in an array
-var myScore = {
-  name: userName,
-  score: userScore,
-}
 
-// var userInfo = JSON.stringify(myScore); //stringify the array
- //setting the array as a value in a key
+const localStorageContent = localStorage.getItem('UserInfo');
 
-//Retrieving Data //grabbing the key
+let myScore;
 
-sessionStorage.setItem("UserInfo", JSON.stringify(myScore));
-var user = JSON.parse(sessionStorage.getItem("UserInfo")); 
-// user.push(myScore);
-//parsing the key into a variable
-// document.getElementById("saved-name").innerHTML = user.name;
-// document.getElementById("saved-score").innerHTML = user.score;
-
-console.log("local storage");
-for (i = 0; i < sessionStorage.length; i++)   {
-    console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(localStorage.key(i)) + "]");
-}
-highScores.append(`${user.name} — ${user.score}`);
+if(localStorageContent === null){
+myScore = [];
+} else {
+  myScore = JSON.parse(localStorageContent);
+  // var i;
+  // for (var i = 0; i < myScore.length; i++){
+  highScores.innerHTML = myScore
 };
 
+myScore.push(userName, userScore)
+localStorage.setItem ("UserInfo", JSON.stringify(myScore));
+};
 
 //High Score Page
 var playAgain = function(){
