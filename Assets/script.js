@@ -9,6 +9,7 @@ var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
 var highScores = document.getElementById("highScores");
+var displayScore = document.getElementById("final-score");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -282,6 +283,7 @@ var choiceA4 = function(){
   if(btnA4.dataset.answer === "true"){
     console.log("YAY");
     userVerdict.innerText = "Correct!";
+    displayScore.innerText = "Your Score: " + c;
     finalPage.setAttribute("style", "display: inline;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
@@ -289,6 +291,7 @@ var choiceA4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -298,6 +301,7 @@ var choiceB4 = function(){
   if(btnB4.dataset.answer === "true"){
     console.log("YAY");
     userVerdict.innerText = "Correct!";
+    displayScore.innerText = "Your Score: " + c;
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
@@ -305,6 +309,7 @@ var choiceB4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -314,6 +319,7 @@ var choiceC4 = function(){
   if(btnC4.dataset.answer === "true"){
     console.log("YAY");
     userVerdict.innerText = "Correct!";
+    displayScore.innerText = "Your Score: " + c;
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
@@ -321,6 +327,7 @@ var choiceC4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -330,6 +337,7 @@ var choiceD4 = function(){
   if(btnD4.dataset.answer === "true"){
     console.log("YAY");
     userVerdict.innerText = "Correct!";
+    displayScore.innerText = "Your Score: " + c;
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
@@ -337,6 +345,7 @@ var choiceD4 = function(){
   } else {
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");

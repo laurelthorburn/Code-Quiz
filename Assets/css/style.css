@@ -113,12 +113,17 @@ ol button {
 }
 
 #final-p,
-#score-p,
 #score-p {
     width: 500px;
     height: auto;
     align-self: center;
     padding: 25px;
+}
+
+#final-score {
+    text-align: center;
+    padding-top: 25px;
+    color: #4b7b7c;
 }
 
 #repeat-btn,
