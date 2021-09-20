@@ -131,3 +131,12 @@ ol button {
     width: 200px;
     margin-top: 5px;
 }
+
+/* #highScore {
+
+} */
+
+#testli {
+    list-style-type: disc;
+    align-self: center;
+}

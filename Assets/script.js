@@ -8,7 +8,7 @@ var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
-var highScores = document.getElementById("highScores");
+var highScores = document.getElementById("testli");
 var displayScore = document.getElementById("final-score");
 
 // grabbing buttons
@@ -371,21 +371,21 @@ var saveScore = function(){
   userScore = c;
   userName = document.getElementById("user-init").value;
 
-const localStorageContent = localStorage.getItem('UserInfo');
+const localStorageContent = localStorage.getItem('Initials: ');
 
 let myScore;
-
 if(localStorageContent === null){
 myScore = [];
 } else {
-  myScore = JSON.parse(localStorageContent);
+  myScore = JSON.parse(localStorageContent); //from string to array
   // var i;
-  // for (var i = 0; i < myScore.length; i++){
-  highScores.innerHTML = myScore
+  for (var i = 0; i < myScore.length; i++){
+  highScores.innerHTML += '<li>' + myScore[i] + '</li>';
+  }
 };
 
-myScore.push(userName, userScore)
-localStorage.setItem ("UserInfo", JSON.stringify(myScore));
+myScore.push(userName, userScore);
+localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 };
 
 //High Score Page
