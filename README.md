@@ -41,6 +41,9 @@ Deployed Site: ***
 
 # Resources/Credit
 
-* link here
-* link here
-* link here
+* https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68
+* https://gomakethings.com/saving-html-to-localstorage-with-vanilla-js/
+* https://www.w3schools.com/js/js_quiz.asp
+* https://www.thiscodeworks.com/add-event-listener-to-multiple-buttons-with-the-same-class-javascript/5efa75c76c23bc0014be6336
+* https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
+
