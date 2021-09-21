@@ -35,7 +35,7 @@ THEN I can save my initials and my score
 
 # Links
 
-Github: ***
+Github: https://github.com/laurelthorburn/Code-Quiz
 Deployed Site: ***
 
 
@@ -46,4 +46,5 @@ Deployed Site: ***
 * https://www.w3schools.com/js/js_quiz.asp
 * https://www.thiscodeworks.com/add-event-listener-to-multiple-buttons-with-the-same-class-javascript/5efa75c76c23bc0014be6336
 * https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
-
+* https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+* https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout_cleartimeout2
