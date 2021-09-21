@@ -301,6 +301,9 @@ var choiceA4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
+    if (c<10){
+      c=10;
+    };
     displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
@@ -320,6 +323,9 @@ var choiceB4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
+    if (c<10){
+      c=10;
+    };
     displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
@@ -339,6 +345,9 @@ var choiceC4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
+    if (c<10){
+      c=10;
+    };
     displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
@@ -358,6 +367,9 @@ var choiceD4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
+    if (c<10){
+      c=10;
+    };
     displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
@@ -393,7 +405,7 @@ localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 
 //High Score Page
 var playAgain = function(){
-location.reload(); //confirm this is the code I want
+location.reload();
 };  
 
 var eraseScores = function(){
