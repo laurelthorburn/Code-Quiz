@@ -301,7 +301,7 @@ var choiceA4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
-    displayScore.innerText = "Your Score: " + c;
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -320,7 +320,7 @@ var choiceB4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
-    displayScore.innerText = "Your Score: " + c;
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -330,7 +330,7 @@ var choiceC4 = function(){
   if(btnC4.dataset.answer === "true"){
     console.log("YAY");
     userVerdict.innerText = "Correct!";
-    displayScore.innerText = "Your Score: " + c;
+    displayScore.innerText = "Your Score: " + (c-10);
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
     pauseTimer();
@@ -339,7 +339,7 @@ var choiceC4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
-    displayScore.innerText = "Your Score: " + c;
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -358,7 +358,7 @@ var choiceD4 = function(){
     console.log("BOO");
     userVerdict.innerText = "Incorrect!";
     timeDeduction;
-    displayScore.innerText = "Your Score: " + c;
+    displayScore.innerText = "Your Score: " + (c-10);
     wrongAnswer();
     finalPage.setAttribute("style", "visibility: visible;");
     quizDiv4.setAttribute("style", "display: none;");
@@ -402,8 +402,14 @@ var eraseScores = function(){
 
 //View HS page link
 hsLink.addEventListener("click", function(){
+  
   scorePage.setAttribute("style", "visibility: visible;");
+  welcomePage.setAttribute("style", "display: none; ");
   finalPage.setAttribute("style", "display: none;");
+  quizDiv1.setAttribute("style", "display: none;");
+  quizDiv2.setAttribute("style", "display: none;");
+  quizDiv3.setAttribute("style", "display: none;");
+  quizDiv4.setAttribute("style", "display: none;");
   userScore = c;
   userName = document.getElementById("user-init").value;
 
@@ -418,7 +424,7 @@ var displayScores = function() {
 
 }
 let myScore = JSON.parse(localStorageContent) || [];
-// myScore.push({name: userName, score: userScore});
+myScore.push({name: userName, score: userScore});
 displayScores();
 localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 });
