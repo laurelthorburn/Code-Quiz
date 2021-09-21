@@ -412,9 +412,8 @@ var eraseScores = function(){
   window.localStorage.clear();
 };
 
-//View HS page link
+// View HS page link
 hsLink.addEventListener("click", function(){
-  
   scorePage.setAttribute("style", "visibility: visible;");
   welcomePage.setAttribute("style", "display: none; ");
   finalPage.setAttribute("style", "display: none;");
@@ -422,21 +421,17 @@ hsLink.addEventListener("click", function(){
   quizDiv2.setAttribute("style", "display: none;");
   quizDiv3.setAttribute("style", "display: none;");
   quizDiv4.setAttribute("style", "display: none;");
-  userScore = c;
-  userName = document.getElementById("user-init").value;
 
   const localStorageContent = localStorage.getItem('Initials: ');
-
-var displayScores = function() {
+  var displayScores = function() {
   for (var i = 0; i < myScore.length; i++){
     var listItem = document.createElement("li");
     listItem.textContent = myScore[i].name + ": " + myScore[i].score;
     highScores.appendChild(listItem);
 }
-
 }
 let myScore = JSON.parse(localStorageContent) || [];
-myScore.push({name: userName, score: userScore});
+// myScore.push({name: userName, score: userScore});
 displayScores();
 localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 });
