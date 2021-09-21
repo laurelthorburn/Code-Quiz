@@ -365,6 +365,12 @@ var choiceD4 = function(){
   }
 };
 
+//View HS
+hsLink.addEventListener("click", function(){
+  welcomePage.setAttribute("style", "display: none; ");
+  scorePage.setAttribute("style", "visibility: visible;");
+});
+
 //Final Page
 var saveScore = function(){
   scorePage.setAttribute("style", "visibility: visible;");
