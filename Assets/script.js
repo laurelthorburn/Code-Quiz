@@ -8,8 +8,9 @@ var quizDiv4 = document.getElementById('quiz4'); //Question 4 Container
 var userVerdict = document.getElementById('verdict');
 var finalPage = document.getElementById('final-page');
 var scorePage = document.getElementById('score-page');
-var highScores = document.getElementById("testli");
+var highScores = document.getElementById("highScores");
 var displayScore = document.getElementById("final-score");
+var hsLink = document.getElementById("view-hs");
 
 // grabbing buttons
 var startBtn = document.getElementById('begin-btn');
@@ -373,23 +374,20 @@ var saveScore = function(){
 
 const localStorageContent = localStorage.getItem('Initials: ');
 
-let myScore;
-if(localStorageContent === null){
-myScore = [{
-    name: userName,
-    score: userScore,
-  }];
-} else {
-  myScore = JSON.parse(localStorageContent); //from string to array
-  // var i;
-  console.log(myScore);
+var displayScores = function() {
   for (var i = 0; i < myScore.length; i++){
-    console.log(localStorageContent);
-  highScores.appendChild('<li>' + myScore[i].name + '</li>'); //rendering here do con.log, 3 part process: 1. create element doesnt exist YET, 2. give that element text content (innertext?)3, append to parent container (we are creating to ol) 
-  }
-};
+    var listItem = document.createElement("li");
+    listItem.textContent = myScore[i].name + ": " + myScore[i].score;
+    highScores.appendChild(listItem);
+}
 
-myScore.push({name: userName, score: userScore}); //can only call push of an array, pushes data into an existing array, spec. at the end
+}
+
+let myScore = JSON.parse(localStorageContent) || [];
+myScore.push({name: userName, score: userScore});
+displayScores();
+
+// myScore.push({name: userName, score: userScore}); //can only call push of an array, pushes data into an existing array, spec. at the end
 localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 };
 
