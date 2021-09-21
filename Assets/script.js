@@ -365,12 +365,6 @@ var choiceD4 = function(){
   }
 };
 
-//View HS
-hsLink.addEventListener("click", function(){
-  welcomePage.setAttribute("style", "display: none; ");
-  scorePage.setAttribute("style", "visibility: visible;");
-});
-
 //Final Page
 var saveScore = function(){
   scorePage.setAttribute("style", "visibility: visible;");
@@ -404,7 +398,30 @@ location.reload(); //confirm this is the code I want
 
 var eraseScores = function(){
   window.localStorage.clear();
+};
+
+//View HS page link
+hsLink.addEventListener("click", function(){
+  scorePage.setAttribute("style", "visibility: visible;");
+  finalPage.setAttribute("style", "display: none;");
+  userScore = c;
+  userName = document.getElementById("user-init").value;
+
+  const localStorageContent = localStorage.getItem('Initials: ');
+
+var displayScores = function() {
+  for (var i = 0; i < myScore.length; i++){
+    var listItem = document.createElement("li");
+    listItem.textContent = myScore[i].name + ": " + myScore[i].score;
+    highScores.appendChild(listItem);
 }
+
+}
+let myScore = JSON.parse(localStorageContent) || [];
+// myScore.push({name: userName, score: userScore});
+displayScores();
+localStorage.setItem ("Initials: ", JSON.stringify(myScore));
+});
 
 //Quiz/timer starts when start quiz button is clicked
 startBtn.addEventListener("click", beginQuiz);
