@@ -36,7 +36,7 @@ THEN I can save my initials and my score
 # Links
 
 Github: https://github.com/laurelthorburn/Code-Quiz
-Deployed Site: ***
+Deployed Site: https://laurelthorburn.github.io/Code-Quiz/
 
 
 # Resources/Credit
