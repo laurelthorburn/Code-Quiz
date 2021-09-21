@@ -31,7 +31,7 @@ THEN I can save my initials and my score
 
 # Website Screenshot
 
-![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Media/PasswordGeneratorVideo.gif)
+![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Images/LaurelCodeQuiz.gif)
 
 # Links
 
