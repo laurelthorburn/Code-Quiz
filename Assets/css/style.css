@@ -23,6 +23,12 @@ h2 {
 
 #view-hs{
     padding: 0 10px;
+    text-decoration: underline;
+}
+
+#view-hs:hover {
+    color: rgba(46, 139, 86, 0.5);
+    cursor: pointer;
 }
 
 #countdown{ 

@@ -375,23 +375,28 @@ const localStorageContent = localStorage.getItem('Initials: ');
 
 let myScore;
 if(localStorageContent === null){
-myScore = [];
+myScore = [{
+    name: userName,
+    score: userScore,
+  }];
 } else {
   myScore = JSON.parse(localStorageContent); //from string to array
   // var i;
+  console.log(myScore);
   for (var i = 0; i < myScore.length; i++){
-  highScores.innerHTML += '<li>' + myScore[i] + '</li>';
+    console.log(localStorageContent);
+  highScores.appendChild('<li>' + myScore[i].name + '</li>'); //rendering here do con.log, 3 part process: 1. create element doesnt exist YET, 2. give that element text content (innertext?)3, append to parent container (we are creating to ol) 
   }
 };
 
-myScore.push(userName, userScore);
+myScore.push({name: userName, score: userScore}); //can only call push of an array, pushes data into an existing array, spec. at the end
 localStorage.setItem ("Initials: ", JSON.stringify(myScore));
 };
 
 //High Score Page
 var playAgain = function(){
 location.reload(); //confirm this is the code I want
-};
+};  
 
 var eraseScores = function(){
   window.localStorage.clear();
