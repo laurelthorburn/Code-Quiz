@@ -44,6 +44,8 @@ var timer_is_on = 0;
 
 var userScore;
 
+let isFinalP = false;
+
 var timeDeduction = function(c){
   if(c >= 10){
     c-10;
@@ -55,18 +57,28 @@ var timeDeduction = function(c){
 function timedCount(){
   timerEl.textContent = "Time: " + c;
   c = c-1;
-  t = setTimeout(timedCount, 1000);
+  t = setTimeout(timedCount, 1000); //i need a base case
 if(c <= 0){
   c = 0;
   timerEl.textContent = "Time: " + c;
-  window.setTimeout(closeResult, 2000 );
+  window.setTimeout(closeResult, 2000);
   quizDiv1.setAttribute("style", "display: none;");
   quizDiv2.setAttribute("style", "display: none;");
   quizDiv3.setAttribute("style", "display: none;");
   quizDiv4.setAttribute("style", "display: none;");
-  finalPage.setAttribute("style", "visibility: visible;");
+  finalParaOnce();
   };
 };
+
+function finalPageVisibility(){
+  finalPage.setAttribute("style", "visibility: visible;");
+  isFinalP = true;
+};
+
+function finalParaOnce(){
+  if (!isFinalP) finalPageVisibility();
+};
+
 
 function pauseTimer(){
   clearTimeout(t);
@@ -112,6 +124,8 @@ quizDiv1.setAttribute("style", "display: none;");
 quizDiv2.setAttribute("style", "display: none;");
 quizDiv3.setAttribute("style", "display: none;");
 quizDiv4.setAttribute("style", "display: none;");
+scorePage.setAttribute("style", "display: none;");
+finalPage.setAttribute("style", "display: none;");
 
 //Q1
 var choiceA = function(){
