@@ -435,6 +435,7 @@ hsLink.addEventListener("click", function(){
   quizDiv2.setAttribute("style", "display: none;");
   quizDiv3.setAttribute("style", "display: none;");
   quizDiv4.setAttribute("style", "display: none;");
+  hsLink.setAttribute("style", "pointer-events: none;");
 
   const localStorageContent = localStorage.getItem('Initials: ');
   var displayScores = function() {
