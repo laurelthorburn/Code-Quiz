@@ -1,8 +1,6 @@
 # Code-Quiz
 ## Description
-The purpose of this project was to create a timed coding quiz that allowed the user to select an answer and receive a final score based off their selections. In addition, the user should be able to save their score, compare it to previous scores, and be able to clear all saved scores if desired.
-
-This project pushed my knowledge of javascript and helped me acknowledge areas that need more study (e.g., arrays).  In addition, I was also able to acknowledge how much I've grown in my CSS and html skills and comfort in troubleshooting and finding alternative solutions to a problem.  I redid this homework assignment quite a few times, mostly due to issues with arrays, but I am proud of my end result and cannot wait to recode it in the future as my skills continue to grow.
+The purpose of this project was to create a timed coding quiz that allows the user to select an answer and receive a final score based off their selections. In addition, the user should be able to save their score, compare it to previous scores, and be able to clear all saved scores if desired.
 
 ## User Story
 
@@ -39,6 +37,12 @@ Github: https://github.com/laurelthorburn/Code-Quiz
 
 Deployed Site: https://laurelthorburn.github.io/Code-Quiz/
 
+# License
+* MIT
+
+# Collaborators
+
+Laurel Thorburn: codinglaurel@gmail.com
 
 # Resources/Credit
 
