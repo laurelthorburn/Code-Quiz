@@ -2,6 +2,12 @@
 ## Description
 The purpose of this project was to create a timed coding quiz that allows the user to select an answer and receive a final score based off their selections. In addition, the user should be able to save their score, compare it to previous scores, and be able to clear all saved scores if desired.
 
+# Links
+
+Github: https://github.com/laurelthorburn/Code-Quiz
+
+Deployed Site: https://laurelthorburn.github.io/Code-Quiz/
+
 ## User Story
 
 ```
@@ -33,12 +39,6 @@ THEN I can save my initials and my score
 # Website Screenshot
 
 ![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Images/LaurelCodeQuiz.gif)
-
-# Links
-
-Github: https://github.com/laurelthorburn/Code-Quiz
-
-Deployed Site: https://laurelthorburn.github.io/Code-Quiz/
 
 # License
 * MIT
