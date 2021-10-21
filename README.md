@@ -36,9 +36,16 @@ THEN I can save my initials and my score
 * CSS
 * JavaScript
 
-# Website Screenshot
+# Website Video
 
 ![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Images/LaurelCodeQuiz.gif)
+
+# Website Screenshots
+
+![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Images/Screenshot1.png)
+
+![Screenshot of Laurel Thorburn's Coding Quiz](Assets/Images/Screenshot2.png)
+
 
 # License
 * MIT
